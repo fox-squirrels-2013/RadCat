@@ -3,3 +3,5 @@
 <p>Price: <%= @post.price %></p>
 <p>Description: <%= @post.body %></p>
 <p>Contact Email: <%= mail_to @post.email %></p>
+
+<p>Secret Key: <span id="skey">/posts/<%= @post.id %>/edit?key=<%= @post.key %></span></p>

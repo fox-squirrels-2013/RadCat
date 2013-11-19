@@ -1,0 +1,10 @@
+<h1>Edit <%= @post.name %></h1>
+
+<%= form_for @post do |f| %>
+<p>Category: <%= f.select :category_id, options_for_select( all_categories.map{|category| ["#{category.title}", category.id] }, @post.category.id  ) %></p>
+<p><%= f.text_field :name, :placeholder => @post.name %> Name</p>
+<p><%= f.text_field :price, :placeholder => @post.price %> Description</p>
+<p><%= f.text_area :body, :placeholder => @post.body %> Body</p>
+<p><%= f.text_field :email, :placeholder => @post.email %> Email</p>
+<%= f.submit "Submit Update" %> or <%= link_to "Delete Post" %>
+<% end %>
