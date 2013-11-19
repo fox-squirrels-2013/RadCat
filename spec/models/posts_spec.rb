@@ -1,6 +1,9 @@
 require 'spec_helper'
 
 describe Post do 
+
+	it { should belong_to :category }
+
 	let(:post) { Post.new(name: 'Ty', price: '$1.00', body: 'cool dude', email: 'ty@ty.co') }
 
 	context "#initialize" do
@@ -17,4 +20,12 @@ describe Post do
 			post.key.should_not be_empty
 		end
 	end
+
+	# context "associations" do
+
+	# 	it "should have an associationed array of categories" do
+	# 		post.category.should_not be_nil
+	# 	end
+	# end
+
 end
