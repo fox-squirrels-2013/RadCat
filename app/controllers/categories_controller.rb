@@ -1,6 +1,9 @@
 class CategoriesController < ApplicationController
 
   def index
+        p '**************'
+    p params
+    p flash
     @categories = Category.all
   end
 

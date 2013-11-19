@@ -21,11 +21,10 @@ describe Post do
 		end
 	end
 
-	# context "associations" do
-
-	# 	it "should have an associationed array of categories" do
-	# 		post.category.should_not be_nil
-	# 	end
-	# end
+	context "associations" do
+		it "should have a category method" do
+			post.category.should be_nil
+		end
+	end
 
 end
