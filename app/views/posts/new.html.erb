@@ -1,0 +1,11 @@
+<h1>Create New Post</h1>
+
+<%= form_for @post do |f| %>
+<p>Category: <%= f.select :category_id, options_for_select( all_categories.map{|category| ["#{category.title}", category.id] } ) %></p>
+<p><%= f.text_field :name, :placeholder => 'Name' %></p>
+<p><%= f.text_field :price, :placeholder => 'Price $' %></p>
+<p><%= f.text_area :body, :placeholder => 'Description' %></p>
+<p><%= f.email_field :email, :placeholder => 'Email' %></p>
+
+<%= f.submit "Sell it" %>
+<% end %>

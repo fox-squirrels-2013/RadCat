@@ -1,0 +1,5 @@
+<h2>Name: <%= @post.name %></h2>
+<p>Category: <%= link_to @category.title, category_path(@category.id) %></p>
+<p>Price: <%= @post.price %></p>
+<p>Description: <%= @post.body %></p>
+<p>Contact Email: <%= mail_to @post.email %></p>
