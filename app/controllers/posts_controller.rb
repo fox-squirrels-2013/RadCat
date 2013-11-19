@@ -23,6 +23,17 @@ class PostsController < ApplicationController
     redirect_to root_path unless @post.key == params[:key]
   end
 
+  def update
+    @post = Post.find params[:id]
+    @post.update_attributes params[:post]
+    redirect_to post_path(@post.id) if @post.save
+  end
+
+  def destroy
+    @post = Post.find params[:id]
+    @post.destroy
+    redirect_to :root
+  end   
 
 
 end

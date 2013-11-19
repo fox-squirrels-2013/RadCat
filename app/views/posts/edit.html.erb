@@ -6,5 +6,5 @@
 <p><%= f.text_field :price, :placeholder => @post.price %> Description</p>
 <p><%= f.text_area :body, :placeholder => @post.body %> Body</p>
 <p><%= f.text_field :email, :placeholder => @post.email %> Email</p>
-<%= f.submit "Submit Update" %> or <%= link_to "Delete Post" %>
+<%= f.submit "Submit Update" %> or <%= link_to "Delete Post", post_path, :method => :delete %>
 <% end %>
