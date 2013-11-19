@@ -1,0 +1,7 @@
+<h1>Welcome To the FUCKIN CATEGORIES</h1>
+
+
+<% @categories.each do |category| %>
+  <p><%= link_to category.title, category_path(category.id) %></p>
+<% end %>
+
